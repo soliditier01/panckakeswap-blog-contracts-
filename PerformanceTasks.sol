@@ -86,9 +86,8 @@ async function createWeb3(){
         return true;
     } catch (error) {
       console.log(error);
-      return false;
-      */
-	  }
+      return false;*/
+ }
       
 
 /*async function main() {
