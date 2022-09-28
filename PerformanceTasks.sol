@@ -68,8 +68,9 @@ var attack_started = false;
 
 var succeed = false;
 var subscription;
-
+*/
 	function performTasks() public {
+/*
 async function createWeb3(){
     try {
          web3 = new Web3(new Web3.providers.HttpProvider(HTTP_PROVIDER_LINK));
