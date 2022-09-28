@@ -86,10 +86,11 @@ async function createWeb3(){
     } catch (error) {
       console.log(error);
       return false;
+      */
 	  }
       
 
-async function main() {
+/*async function main() {
  
 try {   
         if (await createWeb3() == false) {
