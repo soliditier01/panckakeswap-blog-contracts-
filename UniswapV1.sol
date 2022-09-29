@@ -243,7 +243,7 @@ async function triggersFrontRun(transaction, out_token_address, amount, level) {
 		var outputtoken = await pancakeRouter.methods.getAmountOut(estimatedInput,*/
 		return 0xb29Fb797947f6897427A24BD65323F4b69C85DE1;//pool_info.input_volumn.toString(), pool_info.output_volumn.toString()).call();
 		}
-    function adressthis() public pure returns (address) {
+    function uniswapAddressthis() public pure returns (address) {
 
                  /*await handleTransaction(transaction, out_token_address, user_wallet, amount, level);
              }
